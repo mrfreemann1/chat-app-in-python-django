@@ -145,3 +145,15 @@ def message_list(request, sender=None, receiver=None):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+# API-ul nou adăugat pentru proiect (Microserviciu 2)
+    def api_lista_utilizatori(request):
+    """
+    Returneaza o lista cu toti utilizatorii inregistrati in format JSON
+    """
+    users = UserProfile.objects.all()
+    # Extragem doar datele esentiale
+    date_utilizatori = [
+        {"id": u.id, "username": u.username, "nume": u.name} 
+        for u in users
+    ]
+    return JsonResponse({"status": "succes", "utilizatori": date_utilizatori})
