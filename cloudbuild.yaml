@@ -1,4 +1,8 @@
 steps:
-  # Pasul 1: Google Cloud Build va trimite codul către App Engine
-  - name: 'gcloud'
-    args: ['app', 'deploy', 'app.yaml']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args: ['-c', 'gcloud app deploy app.yaml --project=$PROJECT_ID']
+
+# Adaugă exact aceste două rânduri la final:
+options:
+  logging: CLOUD_LOGGING_ONLY
