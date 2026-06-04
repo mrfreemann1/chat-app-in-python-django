@@ -3,3 +3,4 @@ djangorestframework
 mysqlclient
 gunicorn
 django-crispy-forms
+django-widget-tweaks
