@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'chatapp',
         'USER': 'chatuser',
         'PASSWORD': 'Chat1234!',
-        'HOST': '34.19.127.78',
+        'HOST': '/cloudsql/virtual-machine-mbd:us-west1:chat-db',
         'PORT': '3306',
     }
 }
