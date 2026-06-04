@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'registration.apps.RegistrationConfig',
     'rest_framework',
     'widget_tweaks',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
