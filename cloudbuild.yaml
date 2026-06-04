@@ -1,0 +1,4 @@
+steps:
+  # Pasul 1: Google Cloud Build va trimite codul către App Engine
+  - name: 'gcloud'
+    args: ['app', 'deploy', 'app.yaml']
