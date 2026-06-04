@@ -1,2 +1,2 @@
 runtime: python312
-entrypoint: gunicorn PyChat.wsgi:application
+entrypoint: gunicorn -b :$PORT PyChat.wsgi:application
