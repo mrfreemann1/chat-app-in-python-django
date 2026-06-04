@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'PyChat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'chatapp',
+        'USER': 'chatuser,
+        'PASSWORD': 'Chat1234!',
+        'HOST': '34.19.127.78'
+        'PORT': '3306'
     }
 }
 
