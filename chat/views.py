@@ -31,9 +31,9 @@ def getUserId(username):
     :param username:
     :return: int
     """
-    use = UserProfile.objects.get(username=username)
+    user_profile, created = UserProfile.objects.get_or_create(username=username,defaults={'name': username}
     id = use.id
-    return id
+    return user_profile.id
 
 
 def index(request):
