@@ -1,8 +1,0 @@
-runtime: python312
-entrypoint: gunicorn -b :$PORT PyChat.wsgi:application
-handlers:
-- url: /static
-  static_dir: assets
-
-- url: /.*
-  script: auto
