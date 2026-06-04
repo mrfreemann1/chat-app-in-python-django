@@ -146,7 +146,7 @@ def message_list(request, sender=None, receiver=None):
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
 # API-ul nou adăugat pentru proiect (Microserviciu 2)
-    def api_lista_utilizatori(request):
+def api_lista_utilizatori(request):
     """
     Returneaza o lista cu toti utilizatorii inregistrati in format JSON
     """
